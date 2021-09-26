@@ -181,9 +181,10 @@ end
 
 local Selection
 
+
 local Spoofed = {}
-local Properties = {Size = true,Shape = true,Massless = true,Mass = 1, ["Size\000"] = true}
-local spoofedMethods = {["Clone"] = true,["GetMass"] = true}
+local Properties = {Size = true,Shape = true,Massless = true,Mass = 1}
+local spoofedMethods = {["Clone"] = true,["GetMass"] = true, ["Size\000"] = true}
 
 local Meta
 Meta = hookmetamethod(game,"__index", newcclosure(function(t,k)
