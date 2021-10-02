@@ -300,14 +300,12 @@ local Lunging = {}
 local Sword
 
 local function ResizeSword(CSword,Normal)
-	local function ResizeSword(CSword,Normal)
     local Handle = CSword and CSword:FindFirstChild("Handle")
     local function OnHandle(Handle)
         if not Spoofed[Handle] then
             Spoof(Handle)
             Spoof(Handle.Parent)
               end
-        end
 		local ToEnable = {}
 		for _,v in pairs(getconnections(Handle.Changed)) do table.insert(ToEnable,v);v:Disable() end 
 		for C,_ in pairs(Properties) do
